@@ -1,0 +1,12 @@
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-vue/src/index.scss";
+.fade-enter-active,
+.fade-leave-active {
+    transition-property: opacity;
+    transition-duration: 70ms;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}
