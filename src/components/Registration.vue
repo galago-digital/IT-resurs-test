@@ -295,7 +295,7 @@ export default {
         }
       }
     },
-    reset() {
+    reset() {      
       this.name = "";
       this.date = new Date().toJSON();
       this.email = "";
@@ -308,7 +308,11 @@ export default {
     },
   },
   mounted() {
+    // дата создается в компоненте 5 раз
     this.date = new Date().toJSON();
+    // удобнее создать константу с значениями по умолчнию
+    // и использовать ее при очистке/редактировании/обновлении профиля
+    // т.к. состояние в vuex логично делать это в actions в store
     if (this.currentUser) {
       this.id = this.currentUser.id;
       this.name = this.currentUser.name;

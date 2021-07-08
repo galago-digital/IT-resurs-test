@@ -48,6 +48,7 @@ export default {
         formatter: "formatDate",
       },
       { key: "email", label: "Email" },
+      // по условиям задания телефон не показывается в списке
       { key: "phone", label: "Телефон" },
       {
         key: "distance",

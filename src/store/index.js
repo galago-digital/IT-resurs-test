@@ -13,11 +13,14 @@ export default new Vuex.Store({
             state.users = users
         },
         addUser(state, user) {
+            // назначать id лучше в action, оставляя тут только изменение данных в state
             user.id = state.users.length
             state.users.push(user)
         },
         updateUser(state, user) {
             let oldUserData = state.users.find(item => item.id == user.id);
+            // Object.assign тут очень к месту, код будет короче
+            // и опять же все подобные действия должны быть в actions
             oldUserData.name = user.name;
             oldUserData.date = user.date;
             oldUserData.email = user.email;
